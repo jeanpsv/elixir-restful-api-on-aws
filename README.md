@@ -20,4 +20,8 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 ## Configure development environment
 
 - Install [asdf](https://github.com/asdf-vm/asdf) (runtime versions manager)
-- Run `asdf install`
+- Run `asdf install` to install languages
+- Install Docker and docker-compose [docs](https://docs.docker.com/desktop/)
+- Run `docker-compose up -d` to start containers for development environment
+- Run `mix setup` to install dependencies, create database and run migrations
+- Run `mix phx.server` to start Phoenix web application
