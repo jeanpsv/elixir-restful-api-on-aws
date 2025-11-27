@@ -1,8 +1,7 @@
-name: testing
+name: test
 
 on:
-  pull_request:
-    types: [opened, synchronize]
+  push
 
 env:
   MIX_ENV: test
@@ -16,7 +15,7 @@ concurrency:
 
 jobs:
   test:
-    name: quality
+    name: test
     runs-on: ubuntu-24.04
     services:
       mysql:
