@@ -37,4 +37,4 @@ jobs:
         run: mix test
         env:
           DATABASE_TEST_PASSWORD: "mypassword"
-          DATABASE_TEST_HOSTNAME: "mysql"
+          # DATABASE_TEST_HOSTNAME: "mysql"
