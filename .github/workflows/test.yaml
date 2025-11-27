@@ -1,4 +1,4 @@
-name: Testing application
+name: testing
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   test:
-    name: Test
+    name: testing
     runs-on: ubuntu-24.04
     services:
       mysql:
@@ -20,10 +20,12 @@ jobs:
         env:
           MYSQL_ROOT_PASSWORD: "mypassword"
     steps:
-      - name: Set up Elixir
-        uses: erlef/setup-beam@v1
       - name: Checkout code
         uses: actions/checkout@v6
+      - name: Set up Elixir
+        uses: erlef/setup-beam@v1
+        with:
+          version-file: .tool-versions
       - name: Install dependencies
         run: mix deps.get
       - name: Compiles without warnings
