@@ -1,0 +1,12 @@
+name: elixir-restful-api-on-aws
+
+services:
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./_db/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "myrootpassword"
+      MYSQL_DATABASE: "accounts_test"
