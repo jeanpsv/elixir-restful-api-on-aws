@@ -2,9 +2,9 @@ import Config
 
 # Configure your database
 config :accounts, Accounts.Repo,
-  username: "root",
-  password: "",
-  hostname: "localhost",
+  username: System.get_env("DATABASE_DEV_USERNAME", "root"),
+  password: System.get_env("DATABASE_DEV_PASSWORD", "myrootpassword"),
+  hostname: System.get_env("DATABASE_DEV_HOSTNAME", "localhost"),
   database: "accounts_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,

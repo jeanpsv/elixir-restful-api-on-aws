@@ -9,4 +9,4 @@ services:
       - ./_db/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: "myrootpassword"
-      MYSQL_DATABASE: "accounts_test"
+      MYSQL_DATABASE: "accounts_dev"
